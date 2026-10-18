@@ -1,0 +1,239 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Header & Navigasi */
+header {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 15px 20px;
+}
+
+.situs-nav {
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.situs-nav h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover, nav a.active {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+}
+
+/* Container Utama */
+.konten-utama {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Gambar Responsif */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hero Section (Beranda) */
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.tombol-cta {
+    display: inline-block;
+    background-color: #0284c7;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.tombol-cta:hover {
+    background-color: #0369a1;
+}
+
+/* Layout Biodata (CSS Grid) */
+.layout-biodata {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+/* Foto Profil Sesuai Syarat (Rasio 3:4 & max-width 200px) */
+.foto-profil {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+}
+
+/* Tabel Akademik */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+/* Galeri Liburan (Flexbox Wajib) */
+.galeri-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.kartu-foto {
+    flex: 1 1 calc(33.333% - 15px);
+    min-width: 240px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+.kartu-foto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.kartu-foto p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #475569;
+}
+
+/* Form Kontak */
+.form-kontak {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin-top: 15px;
+}
+
+.grup-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.grup-input label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.grup-input input, .grup-input textarea {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    background-color: #0284c7;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-submit:hover {
+    background-color: #0369a1;
+}
+
+/* Footer */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Responsif Mobile Layout */
+@media (max-width: 768px) {
+    .situs-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero-wrapper, .layout-biodata {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .foto-profil {
+        margin: 0 auto;
+    }
+
+    .kartu-foto {
+        flex: 1 1 100%;
+    }
+}
